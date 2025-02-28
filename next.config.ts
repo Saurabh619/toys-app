@@ -1,9 +1,12 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  // Enable React strict mode for better development experience
-  reactStrictMode: true,
-  output: 'export'
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  // The following is needed if your repo isn't at username.github.io
+  // but instead at username.github.io/your-repo-name
+  basePath: process.env.NODE_ENV === 'production' ? '/toys-app' : '',
+  images: {
+    unoptimized: true,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
