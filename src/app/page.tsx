@@ -1,5 +1,3 @@
-import { Suspense } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import TerminalHeader from './components/TerminalHeader';
 import ToyCard from './components/ToyCard';
@@ -94,7 +92,7 @@ export default function Home() {
           </div>
           
           <div className="text-xs text-gray-600 font-mono pb-4">
-            <span className="glitch-text">/* ACCESS GRANTED • SYSTEM VERSION 1.0.3 • {new Date().getFullYear()} */</span>
+            <span className="glitch-text">{'/* ACCESS GRANTED • SYSTEM VERSION 1.0.3 • ' + new Date().getFullYear() + ' */'}</span>
           </div>
         </footer>
       </div>
